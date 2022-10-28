@@ -1,0 +1,36 @@
+// * Header Contacts *
+
+.contacts {
+  display: flex;
+  column-gap: 50px;
+}
+
+.contacts__link {
+  @include centeredFlex($justify-content: baseline);
+  column-gap: 10px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  transition: color var(--transition-dur-and-func);
+
+  color: var(--secondary-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+
+  &:link,
+  &:visited {
+    color: var(--secondary-text-color);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--text-color--accent);
+  }
+}
+
+.contacts__icon {
+  fill: currentColor;
+}

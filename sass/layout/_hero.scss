@@ -1,0 +1,51 @@
+// * HERO SECTION *
+
+.hero {
+  max-width: 1600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--grey);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  text-align: center;
+}
+
+/* heading */
+
+.hero__title {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  max-width: 696px;
+
+  color: var(--text-color--bright);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* button */
+
+.hero__button {
+  @extend %button;
+  display: inline-block;
+
+  padding-right: 32px;
+  padding-left: 32px;
+  min-width: 216px;
+}

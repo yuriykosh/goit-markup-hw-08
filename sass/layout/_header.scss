@@ -1,0 +1,11 @@
+// * Header *
+
+.header {
+  background-color: var(--bg-color--bright);
+  border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+  @extend %container;
+  @include centeredFlex($justify-content: space-between);
+}

@@ -1,0 +1,50 @@
+// * SOCIALS *
+
+.socials {
+  @include centeredFlex();
+  gap: 10px;
+}
+
+.socials__item {
+  display: flex;
+}
+
+.socials__link {
+  @include centeredFlex();
+  padding: 0;
+  border: none;
+
+  width: 44px;
+  height: 44px;
+
+  transition: background-color var(--transition-dur-and-func),
+    color var(--transition-dur-and-func);
+
+  background-color: transparent;
+  color: var(--icon-color);
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+    color: var(--white);
+  }
+}
+
+.socials__icon {
+  fill: currentColor;
+}
+
+// * SOCIALS--DARK *
+
+.socials__link--dark {
+  transition: background-color var(--transition-dur-and-func);
+
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent);
+  }
+}

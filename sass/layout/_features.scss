@@ -1,0 +1,49 @@
+// * "НАШІ ПЕРЕВАГИ" SECTION *
+
+// gallery
+.features {
+  display: flex;
+  justify-content: space-between;
+}
+
+// thumb
+.features__item {
+  max-width: 270px;
+}
+
+// picture
+.features__pic {
+  @include centeredFlex();
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: var(--secondary-bg-color);
+
+  border-radius: 4px;
+}
+
+.features__icon {
+  width: 70px;
+  height: 70px;
+}
+
+// meta
+.features__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.features__description {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: var(--secondary-text-color);
+
+  font-size: 14px;
+  line-height: 1.7;
+}

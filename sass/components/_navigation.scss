@@ -1,0 +1,4 @@
+.navigation {
+  @include centeredFlex($justify-content: baseline);
+  column-gap: 93px;
+}

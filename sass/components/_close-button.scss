@@ -1,0 +1,31 @@
+// * CLOSE BUTTON *
+
+.close-button {
+  position: absolute;
+  @include centeredFlex();
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  transition: color var(--transition-dur-and-func);
+
+  color: #000;
+  background-color: var(--bg-color--bright);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.close-button:hover,
+.close-button:focus {
+  cursor: pointer;
+
+  color: var(--text-color--accent);
+}
+
+.close-button__icon {
+  width: 18px;
+  height: 18px;
+
+  fill: currentColor;
+}
