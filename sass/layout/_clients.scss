@@ -2,11 +2,17 @@
 
 .clients {
   @include centeredFlex();
+  flex-wrap: wrap;
   gap: 30px;
 }
 
+// .clients__item {
+//   width: 170px;
+//   height: 92px;
+// }
+
 .clients__item {
-  width: 170px;
+  width: calc((100% - 30px) / 2);
   height: 92px;
 }
 

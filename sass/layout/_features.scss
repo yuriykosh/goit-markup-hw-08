@@ -1,14 +1,23 @@
 // * "НАШІ ПЕРЕВАГИ" SECTION *
 
-// gallery
-.features {
-  display: flex;
-  justify-content: space-between;
-}
+// // gallery
+// .features {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// // thumb
+// .features__item {
+//   max-width: 270px;
+// }
 
 // thumb
 .features__item {
-  max-width: 270px;
+  max-width: 450px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 // picture
@@ -29,21 +38,19 @@
 
 // meta
 .features__title {
-  margin-top: 0;
   margin-bottom: 10px;
+
+  text-align: center;
 
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.142;
   text-transform: uppercase;
 }
 
 .features__description {
-  margin-top: 0;
-  margin-bottom: 0;
-
   color: var(--secondary-text-color);
 
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.714;
 }

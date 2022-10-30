@@ -2,19 +2,31 @@
 
 .address {
   margin-top: 20px;
+  margin-bottom: 60px;
 
   font-style: normal;
 }
 
+// .address__item:not(:last-child) {
+//   margin-bottom: 9px;
+// }
+
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
+
+// .address__link {
+//   color: rgba(255, 255, 255, 0.6);
+
+//   font-size: 14px;
+//   line-height: 1.2;
+// }
 
 .address__link {
   color: rgba(255, 255, 255, 0.6);
 
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.714;
 }
 
 .address__link--location {

@@ -1,7 +1,16 @@
 // * "НАША КОМАНДА" SECTION *
 
+// .team {
+//   @extend %section;
+
+//   background-color: var(--secondary-bg-color);
+
+//   text-align: center;
+// }
+
 .team {
-  @extend %section;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   background-color: var(--secondary-bg-color);
 

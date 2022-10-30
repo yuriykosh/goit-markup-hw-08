@@ -5,7 +5,73 @@
   border-bottom: 1px solid #ececec;
 }
 
+// .header__container {
+//   @extend %container;
+//   @include centeredFlex($justify-content: space-between);
+// }
+
 .header__container {
-  @extend %container;
   @include centeredFlex($justify-content: space-between);
+
+  max-width: var(--bp-mobile);
+  padding-left: 15px;
+  padding-right: 15px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__button {
+  @include centeredFlex();
+
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  color: var(--text-color-dark);
+
+  .header__mobile-container & {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+.js-close-menu:hover,
+.js-close-menu:focus {
+  color: var(--accent);
+}
+
+.header__icon {
+  fill: currentColor;
+}
+
+.header__mobile-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 64px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: var(--bg-color--bright);
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  &.is-open {
+    transform: translateX(0);
+  }
 }

@@ -30,50 +30,92 @@
   <body>
     <header class="header">
       <div class="header__container">
-        <nav class="navigation">
-          <!-- logo -->
-          <a class="logo" href="index.html"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
+        <!-- logo -->
+        <a class="logo" href="index.html"
+          ><span class="logo__accent">Web</span>Studio</a
+        >
 
-          <!-- menu -->
-          <ul class="nav-menu">
-            <li class="nav-menu__item">
+        <button
+          class="header__button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="header__icon" width="24" height="16">
+            <use href="./images/sprite.svg#icon-burgermenu"></use>
+          </svg>
+        </button>
+
+        <!-- mobile container -->
+        <div class="header__mobile-container js-menu-container">
+          <button class="header__button js-close-menu">
+            <svg class="header__icon" width="19" height="19">
+              <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <!-- navigation -->
+          <nav class="navigation">
+            <!-- menu -->
+            <ul class="nav-menu">
+              <li class="nav-menu__item">
+                <a
+                  class="nav-menu__link nav-menu__link--current"
+                  href="index.html"
+                  >Студія</a
+                >
+              </li>
+
+              <li class="nav-menu__item">
+                <a class="nav-menu__link" href="portfolio.html">Портфоліо</a>
+              </li>
+
+              <li class="nav-menu__item">
+                <a class="nav-menu__link" href="/">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- contacts -->
+          <ul class="contacts">
+            <li class="contacts__item">
               <a
-                class="nav-menu__link nav-menu__link--current"
-                href="index.html"
-                >Студія</a
+                class="contacts__link contacts__link--mail"
+                href="mailto:info@devstudio.com"
+              >
+                <svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/sprite.svg#envelope"></use></svg
+                >info@devstudio.com</a
               >
             </li>
 
-            <li class="nav-menu__item">
-              <a class="nav-menu__link" href="portfolio.html">Портфоліо</a>
-            </li>
-
-            <li class="nav-menu__item">
-              <a class="nav-menu__link" href="/">Контакти</a>
+            <li class="contacts__item">
+              <a
+                class="contacts__link contacts__link--tel"
+                href="tel:+380961111111"
+              >
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/sprite.svg#smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
 
-        <!-- contacts -->
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-
-          <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/sprite.svg#smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <!-- mobile socials -->
+          <ul class="mobile-socials">
+            <li class="mobile-socials__item">
+              <a href="" class="mobile-socials__link">Instagram</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a href="" class="mobile-socials__link">Twitter</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a href="" class="mobile-socials__link">Facebook</a>
+            </li>
+            <li class="mobile-socials__item">
+              <a href="" class="mobile-socials__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -439,8 +481,8 @@
       <div class="modal">
         <!-- modal close buttom -->
         <button class="close-button" data-modal-close>
-          <svg class="close-button__icon">
-            <use href="./images/sprite.svg#close"></use>
+          <svg class="close-button__icon" width="11" height="11">
+            <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
 
@@ -641,6 +683,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Mobile Nav Script -->
+    <script defer src="./js/mobile-menu.js"></script>
 
     <!-- Modal On/Off Script -->
     <script src="./js/modal.js"></script>

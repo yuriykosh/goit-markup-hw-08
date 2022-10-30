@@ -6,13 +6,11 @@
 
 // heading
 .callback-form__title {
-  padding: 0;
-  margin: 0;
   margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
 }
 
 // main container
@@ -21,7 +19,7 @@
   flex-direction: column;
   gap: 10px;
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 // fields
@@ -37,7 +35,7 @@
   margin-bottom: 4px;
 
   font-size: 12px;
-  line-height: 1.166;
+  line-height: 1.171;
   letter-spacing: 0.01em;
 
   color: var(--secondary-text-color);
@@ -45,7 +43,6 @@
 
 // input
 .callback-form__input {
-  margin: 0;
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 42px;
@@ -115,9 +112,16 @@
 }
 
 // policy field
+// .callback-form__field--policy {
+//   @include centeredFlex();
+//   gap: 7px;
+
+//   margin-bottom: 30px;
+// }
+
 .callback-form__field--policy {
   @include centeredFlex();
-  gap: 7px;
+  gap: 8px;
 
   margin-bottom: 30px;
 }
@@ -142,11 +146,20 @@
   }
 }
 
+// .callback-form__checkbox-label {
+//   user-select: none;
+
+//   font-size: 14px;
+//   line-height: 1.714;
+
+//   color: var(--secondary-text-color);
+// }
+
 .callback-form__checkbox-label {
   user-select: none;
 
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.166;
 
   color: var(--secondary-text-color);
 }

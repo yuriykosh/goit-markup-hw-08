@@ -1,14 +1,48 @@
 // * SUBSCRIBE FORM *
 
-// form
-.subscribe-form {
-  @include centeredFlex();
-  gap: 12px;
-}
+// // form
+// .subscribe-form {
+//   @include centeredFlex();
+//   gap: 12px;
+// }
 
-// input
+// // input
+// .subscribe-form__input {
+//   width: 358px;
+//   padding-top: 15px;
+//   padding-bottom: 15px;
+//   padding-left: 16px;
+
+//   transition: border var(--transition-dur-and-func);
+//   outline: none;
+
+//   background-color: transparent;
+//   color: var(--text-color--bright);
+//   border: 1px solid rgba(255, 255, 255, 0.3);
+//   border-radius: 4px;
+//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+//   font-size: 16px;
+//   line-height: 1.25;
+//   letter-spacing: 0.03em;
+
+//   &:focus {
+//     border: 1px solid var(--accent);
+//   }
+
+//   &::placeholder {
+//     font-size: 16px;
+//     line-height: 1.25;
+//     letter-spacing: 0.03em;
+
+//     color: rgba(255, 255, 255, 0.6);
+//   }
+// }
+
 .subscribe-form__input {
-  width: 358px;
+  width: 100%;
+
+  margin-bottom: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -39,12 +73,21 @@
   }
 }
 
-// submit button
+// // submit button
+// .button--subscribe {
+//   gap: 10px;
+
+//   padding-left: 28px;
+//   padding-right: 28px;
+// }
+
 .button--subscribe {
   gap: 10px;
 
-  padding-left: 28px;
-  padding-right: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 31px;
+  padding-right: 31px;
 }
 
 .button__icon {
