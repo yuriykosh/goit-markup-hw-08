@@ -1,26 +1,13 @@
-// .section {
-//   @extend %section;
-// }
-
-// .section__container {
-//   @extend %container;
-// }
-
-// .section__title {
-//   margin-top: 0;
-//   margin-bottom: 50px;
-
-//   font-weight: 700;
-//   font-size: 36px;
-//   line-height: 1.2;
-//   text-align: center;
-// }
-
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
 
   background-color: var(--bg-color--bright);
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section__container {
@@ -29,6 +16,13 @@
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    max-width: var(--bp-tablet);
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: var(--bp-desktop);
+  }
 }
 
 .section__title {
@@ -39,4 +33,11 @@
   font-size: 28px;
   line-height: 1.178;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.2;
+  }
 }

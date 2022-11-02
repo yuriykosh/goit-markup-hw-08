@@ -9,56 +9,70 @@
   display: flex;
   flex-direction: column-reverse;
   gap: 32px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    column-gap: 50px;
+  }
 }
 
-// .contacts__link {
-//   @include centeredFlex($justify-content: baseline);
-//   column-gap: 10px;
-//   padding-top: 32px;
-//   padding-bottom: 32px;
+.contacts__link {
+  @media screen and (min-width: 768px) {
+    @include centeredFlex($justify-content: baseline);
+    column-gap: 8px;
 
-//   transition: color var(--transition-dur-and-func);
+    transition: color var(--transition-dur-and-func);
 
-//   color: var(--secondary-text-color);
+    color: var(--secondary-text-color);
 
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.1;
-//   letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
 
-//   &:link,
-//   &:visited {
-//     color: var(--secondary-text-color);
-//   }
+    &:link,
+    &:visited {
+      color: var(--secondary-text-color);
+    }
 
-//   &:hover,
-//   &:focus {
-//     color: var(--text-color--accent);
-//   }
-// }
+    &:hover,
+    &:focus {
+      color: var(--text-color--accent);
+    }
+  }
+}
 
 .contacts__link--tel {
-  font-weight: 500;
-  font-size: 34px;
-  line-height: 1.176;
-  letter-spacing: 0.02em;
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
 
-  color: var(--text-color--accent);
+    color: var(--text-color--accent);
+  }
 }
 
 .contacts__link--mail {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.166;
-  letter-spacing: 0.02em;
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: 0.02em;
 
-  color: var(--secondary-text-color);
+    color: var(--secondary-text-color);
+  }
 }
 
-// .contacts__icon {
-//   fill: currentColor;
-// }
-
 .contacts__icon {
-  display: none;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  fill: currentColor;
 }

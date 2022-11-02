@@ -1,22 +1,31 @@
 // * "НАШІ ПЕРЕВАГИ" SECTION *
 
-// // gallery
-// .features {
-//   display: flex;
-//   justify-content: space-between;
-// }
-
-// // thumb
-// .features__item {
-//   max-width: 270px;
-// }
+// gallery
+.features {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 
 // thumb
 .features__item {
-  max-width: 450px;
+  @media screen and (max-width: 767px) {
+    max-width: 450px;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: calc((100% - 90px) / 4);
   }
 }
 
@@ -46,6 +55,10 @@
   font-size: 14px;
   line-height: 1.142;
   text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .features__description {

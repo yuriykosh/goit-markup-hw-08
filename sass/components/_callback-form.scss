@@ -112,18 +112,15 @@
 }
 
 // policy field
-// .callback-form__field--policy {
-//   @include centeredFlex();
-//   gap: 7px;
-
-//   margin-bottom: 30px;
-// }
-
 .callback-form__field--policy {
   @include centeredFlex();
   gap: 8px;
 
   margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    gap: 7px;
+  }
 }
 
 .checkbox {
@@ -146,15 +143,6 @@
   }
 }
 
-// .callback-form__checkbox-label {
-//   user-select: none;
-
-//   font-size: 14px;
-//   line-height: 1.714;
-
-//   color: var(--secondary-text-color);
-// }
-
 .callback-form__checkbox-label {
   user-select: none;
 
@@ -162,6 +150,11 @@
   line-height: 1.166;
 
   color: var(--secondary-text-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .callback-form__checkbox-link {

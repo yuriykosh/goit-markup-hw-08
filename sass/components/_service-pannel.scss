@@ -1,35 +1,35 @@
 // * SERVICE-PANNEL *
 
-// .service-pannel {
-//   display: flex;
-//   justify-content: space-between;
-// }
+.service-pannel {
+  display: flex;
+  justify-content: space-between;
+}
 
-// .service-pannel__item {
-//   position: relative;
-// }
+.service-pannel__item {
+  position: relative;
+}
 
-// .service-pannel__description {
-//   position: absolute;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   left: 0;
-//   bottom: 0;
-//   width: 100%;
-//   height: 70px;
+.service-pannel__description {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
 
-//   background-color: rgba(47, 48, 58, 0.8);
-// }
+  background-color: rgba(47, 48, 58, 0.8);
+}
 
-// .service-pannel__title {
-//   margin-top: 0;
-//   margin-bottom: 0;
+.service-pannel__title {
+  margin-top: 0;
+  margin-bottom: 0;
 
-//   color: var(--text-color--bright);
+  color: var(--text-color--bright);
 
-//   font-weight: 700;
-//   font-size: 14px;
-//   line-height: 1.142;
-//   text-transform: uppercase;
-// }
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  text-transform: uppercase;
+}

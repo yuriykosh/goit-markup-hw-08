@@ -32,4 +32,8 @@
   &--footer {
     color: inherit;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
 }

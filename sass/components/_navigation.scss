@@ -4,3 +4,9 @@
 //   @include centeredFlex($justify-content: baseline);
 //   column-gap: 93px;
 // }
+
+.navigation {
+  @media screen and (max-width: 767px) {
+    margin-bottom: auto;
+  }
+}
