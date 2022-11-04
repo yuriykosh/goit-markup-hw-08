@@ -204,39 +204,93 @@
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="service-pannel">
             <li class="service-pannel__item">
-              <img
-                class="service-pannel__image"
-                src="./images/close-up-image-programer-working-his-desk-office_1098-18707.jpeg"
-                alt="Стіл з двома екранами на яких видно код, клавіатурою та папером з розміткою. Людина користується клавіатурою."
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/service1-desktop.webp    1x,
+                    ./images/service1-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/service1-desktop.jpeg    1x,
+                    ./images/service1-desktop@2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  src="./images/service1-desktop.jpeg"
+                  alt="Стіл з двома екранами на яких видно код, клавіатурою та папером з розміткою. Людина користується клавіатурою."
+                  class="service-pannel__image"
+                />
+              </picture>
+
               <div class="service-pannel__description">
                 <p class="service-pannel__title">Десктопні додатки</p>
               </div>
             </li>
 
             <li class="service-pannel__item">
-              <img
-                class="service-pannel__image"
-                src="./images/web-ui-designers-are-developing-application-smartphones-team-creators-is-working-interface-mobile-phones_8119-2713.jpeg"
-                alt="На столі стоїть лєптоп і окремий монітор на якіх зображені мобільні прототипи. Людина тримає смартфон."
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/service2-desktop.webp    1x,
+                    ./images/service2-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/service2-desktop.jpeg    1x,
+                    ./images/service2-desktop@2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  src="./images/service2-desktop.jpeg"
+                  alt="На столі стоїть лєптоп і окремий монітор на якіх зображені мобільні прототипи. Людина тримає смартфон."
+                  class="service-pannel__image"
+                />
+              </picture>
+
               <div class="service-pannel__description">
                 <p class="service-pannel__title">Мобільні додатки</p>
               </div>
             </li>
 
             <li class="service-pannel__item">
-              <img
-                class="service-pannel__image"
-                src="./images/creative-artist-web-design-with-working-colour-selection-graphic-tablet_35674-1119.jpeg"
-                alt="Людина на планшеті вибірає колір з палітри кольорів. На задньому плані видно стіл з монітором, клавіатурою, мишкою та смартфоном."
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/service3-desktop.webp    1x,
+                    ./images/service3-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/service3-desktop.jpeg    1x,
+                    ./images/service3-desktop@2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  src="./images/service3-desktop.jpeg"
+                  alt="Людина на планшеті вибірає колір з палітри кольорів. На задньому плані видно стіл з монітором, клавіатурою, мишкою та смартфоном."
+                  class="service-pannel__image"
+                />
+              </picture>
+
               <div class="service-pannel__description">
                 <p class="service-pannel__title">Дизайнерські рішення</p>
               </div>
@@ -252,13 +306,68 @@
 
           <ul class="employee">
             <li class="employee__item">
-              <img
-                class="employee__pic"
-                src="./images/4853.jpeg"
-                alt="Ігор Дем'яненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- desktop pic -->
+                <source
+                  srcset="
+                    ./images/employee1-desktop.webp    1x,
+                    ./images/employee1-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee1-desktop.jpeg    1x,
+                    ./images/employee1-desktop@2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <!-- tablet pic -->
+                <source
+                  srcset="
+                    ./images/employee1-tablet.webp    1x,
+                    ./images/employee1-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee1-tablet.jpeg    1x,
+                    ./images/employee1-tablet@2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <!-- mobile pic -->
+                <source
+                  srcset="
+                    ./images/employee1-mobile.webp    1x,
+                    ./images/employee1-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee1-mobile.jpeg    1x,
+                    ./images/employee1-mobile@2x.jpeg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/employee1-mobile.jpeg"
+                  alt="Ігор Дем'яненко"
+                  class="employee__pic"
+                />
+              </picture>
+
               <div class="employee__info">
                 <h3 class="employee__title">Ігор Дем'яненко</h3>
                 <p class="employee__description">Product Designer</p>
@@ -293,13 +402,68 @@
             </li>
 
             <li class="employee__item">
-              <img
-                class="employee__pic"
-                src="./images/5844.jpeg"
-                alt="Ольга Рєпіна"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- desktop pic -->
+                <source
+                  srcset="
+                    ./images/employee2-desktop.webp    1x,
+                    ./images/employee2-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee2-desktop.jpeg    1x,
+                    ./images/employee2-desktop@2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <!-- tablet pic -->
+                <source
+                  srcset="
+                    ./images/employee2-tablet.webp    1x,
+                    ./images/employee2-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee2-tablet.jpeg    1x,
+                    ./images/employee2-tablet@2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <!-- mobile pic -->
+                <source
+                  srcset="
+                    ./images/employee2-mobile.webp    1x,
+                    ./images/employee2-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee2-mobile.jpeg    1x,
+                    ./images/employee2-mobile@2x.jpeg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/employee2-mobile.jpeg"
+                  alt="Ольга Рєпіна"
+                  class="employee__pic"
+                />
+              </picture>
+
               <div class="employee__info">
                 <h3 class="employee__title">Ольга Рєпіна</h3>
                 <p class="employee__description">Frontend Developer</p>
@@ -334,13 +498,68 @@
             </li>
 
             <li class="employee__item">
-              <img
-                class="employee__pic"
-                src="./images/16166.jpeg"
-                alt="Микола Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- desktop pic -->
+                <source
+                  srcset="
+                    ./images/employee3-desktop.webp    1x,
+                    ./images/employee3-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee3-desktop.jpeg    1x,
+                    ./images/employee3-desktop@2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <!-- tablet pic -->
+                <source
+                  srcset="
+                    ./images/employee3-tablet.webp    1x,
+                    ./images/employee3-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee3-tablet.jpeg    1x,
+                    ./images/employee3-tablet@2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <!-- mobile pic -->
+                <source
+                  srcset="
+                    ./images/employee3-mobile.webp    1x,
+                    ./images/employee3-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee3-mobile.jpeg    1x,
+                    ./images/employee3-mobile@2x.jpeg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/employee3-mobile.jpeg"
+                  alt="Микола Тарасов"
+                  class="employee__pic"
+                />
+              </picture>
+
               <div class="employee__info">
                 <h3 class="employee__title">Микола Тарасов</h3>
                 <p class="employee__description">Marketing</p>
@@ -375,13 +594,68 @@
             </li>
 
             <li class="employee__item">
-              <img
-                class="employee__pic"
-                src="images/2968.jpeg"
-                alt="Михайло Єрмаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- desktop pic -->
+                <source
+                  srcset="
+                    ./images/employee4-desktop.webp    1x,
+                    ./images/employee4-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee4-desktop.jpeg    1x,
+                    ./images/employee4-desktop@2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+
+                <!-- tablet pic -->
+                <source
+                  srcset="
+                    ./images/employee4-tablet.webp    1x,
+                    ./images/employee4-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee4-tablet.jpeg    1x,
+                    ./images/employee4-tablet@2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <!-- mobile pic -->
+                <source
+                  srcset="
+                    ./images/employee4-mobile.webp    1x,
+                    ./images/employee4-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/employee4-mobile.jpeg    1x,
+                    ./images/employee4-mobile@2x.jpeg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="./images/employee4-mobile.jpeg"
+                  alt="Михайло Єрмаков"
+                  class="employee__pic"
+                />
+              </picture>
+
               <div class="employee__info">
                 <h3 class="employee__title">Михайло Єрмаков</h3>
                 <p class="employee__description">UI Designer</p>
