@@ -29,6 +29,8 @@
     );
 
     max-width: var(--bp-desktop);
+
+    text-align: left;
   }
 }
 
@@ -47,6 +49,12 @@
     column-gap: 70px;
 
     margin-bottom: 0;
+  }
+}
+
+.footer__main {
+  @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
   }
 }
 

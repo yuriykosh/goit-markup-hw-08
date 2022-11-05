@@ -46,75 +46,77 @@
         </button>
 
         <!-- mobile container -->
-        <div class="header__nav-container js-menu-container">
-          <button class="header__button js-close-menu">
-            <svg class="header__icon" width="19" height="19">
-              <use href="./images/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
+        <div class="header__nav-container js-menu-container" id="mobile-menu">
+          <div class="header__wrapper">
+            <button class="header__button header__button--close js-close-menu">
+              <svg class="header__icon" width="19" height="19">
+                <use href="./images/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
 
-          <!-- navigation -->
-          <nav class="navigation">
-            <!-- menu -->
-            <ul class="nav-menu">
-              <li class="nav-menu__item">
-                <a class="nav-menu__link" href="index.html">Студія</a>
-              </li>
+            <!-- navigation -->
+            <nav class="navigation">
+              <!-- menu -->
+              <ul class="nav-menu">
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="index.html">Студія</a>
+                </li>
 
-              <li class="nav-menu__item">
+                <li class="nav-menu__item">
+                  <a
+                    class="nav-menu__link nav-menu__link--current"
+                    href="portfolio.html"
+                    >Портфоліо</a
+                  >
+                </li>
+
+                <li class="nav-menu__item">
+                  <a class="nav-menu__link" href="/">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- contacts -->
+            <ul class="contacts">
+              <li class="contacts__item">
                 <a
-                  class="nav-menu__link nav-menu__link--current"
-                  href="portfolio.html"
-                  >Портфоліо</a
+                  class="contacts__link contacts__link--mail"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="contacts__icon" width="16" height="12">
+                    <use href="./images/sprite.svg#envelope"></use></svg
+                  >info@devstudio.com</a
                 >
               </li>
 
-              <li class="nav-menu__item">
-                <a class="nav-menu__link" href="/">Контакти</a>
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__link--tel"
+                  href="tel:+380961111111"
+                >
+                  <svg class="contacts__icon" width="10" height="16">
+                    <use href="./images/sprite.svg#smartphone"></use></svg
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
-          </nav>
 
-          <!-- contacts -->
-          <ul class="contacts">
-            <li class="contacts__item">
-              <a
-                class="contacts__link contacts__link--mail"
-                href="mailto:info@devstudio.com"
-              >
-                <svg class="contacts__icon" width="16" height="12">
-                  <use href="./images/sprite.svg#envelope"></use></svg
-                >info@devstudio.com</a
-              >
-            </li>
-
-            <li class="contacts__item">
-              <a
-                class="contacts__link contacts__link--tel"
-                href="tel:+380961111111"
-              >
-                <svg class="contacts__icon" width="10" height="16">
-                  <use href="./images/sprite.svg#smartphone"></use></svg
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-
-          <!-- mobile socials -->
-          <ul class="mobile-socials">
-            <li class="mobile-socials__item">
-              <a href="" class="mobile-socials__link">Instagram</a>
-            </li>
-            <li class="mobile-socials__item">
-              <a href="" class="mobile-socials__link">Twitter</a>
-            </li>
-            <li class="mobile-socials__item">
-              <a href="" class="mobile-socials__link">Facebook</a>
-            </li>
-            <li class="mobile-socials__item">
-              <a href="" class="mobile-socials__link">LinkedIn</a>
-            </li>
-          </ul>
+            <!-- mobile socials -->
+            <ul class="mobile-socials">
+              <li class="mobile-socials__item">
+                <a href="" class="mobile-socials__link">Instagram</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a href="" class="mobile-socials__link">Twitter</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a href="" class="mobile-socials__link">Facebook</a>
+              </li>
+              <li class="mobile-socials__item">
+                <a href="" class="mobile-socials__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -126,32 +128,6 @@
           <h1 class="section__title visually-hidden">Портфоліо</h1>
 
           <!--Filter Navigation-->
-          <!-- <ul class="filter-nav list">
-            <li class="filter-nav__item">
-              <button class="filter-nav__button" type="button">Усі</button>
-            </li>
-
-            <li class="filter-nav__item">
-              <button class="filter-nav__button" type="button">
-                Веб-сайти
-              </button>
-            </li>
-
-            <li class="filter-nav__item">
-              <button class="filter-nav__button" type="button">Додатки</button>
-            </li>
-
-            <li class="filter-nav__item">
-              <button class="filter-nav__button" type="button">Дизайн</button>
-            </li>
-
-            <li class="filter-nav__item">
-              <button class="filter-nav__button" type="button">
-                Маркетинг
-              </button>
-            </li>
-          </ul> -->
-
           <form class="filter">
             <ul class="filter__list">
               <li class="filter__item">
@@ -222,13 +198,68 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="/">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
-                    src="./images/portfolio1.jpeg"
-                    alt="Веб-сайт на мокапі лєптопа"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio09-desktop.webp    1x,
+                        ./images/portfolio09-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio09-desktop.jpeg    1x,
+                        ./images/portfolio09-desktop@2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- tablet pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio09-tablet.webp    1x,
+                        ./images/portfolio09-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio09-tablet.jpeg    1x,
+                        ./images/portfolio09-tablet@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- mobile pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio09-mobile.webp    1x,
+                        ./images/portfolio09-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio09-mobile.jpeg    1x,
+                        ./images/portfolio09-mobile@2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/portfolio09-mobile.jpeg"
+                      alt="Веб-сайт на мокапі лєптопа"
+                      class="portfolio__image"
+                    />
+                  </picture>
+
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -250,13 +281,68 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="/">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
-                    src="./images/portfolio2.jpeg"
-                    alt="Ігровий момент гравців команд НБА з графічними елементами"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio08-desktop.webp    1x,
+                        ./images/portfolio08-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio08-desktop.jpeg    1x,
+                        ./images/portfolio08-desktop@2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- tablet pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio08-tablet.webp    1x,
+                        ./images/portfolio08-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio08-tablet.jpeg    1x,
+                        ./images/portfolio08-tablet@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- mobile pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio08-mobile.webp    1x,
+                        ./images/portfolio08-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio08-mobile.jpeg    1x,
+                        ./images/portfolio08-mobile@2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/portfolio08-mobile.jpeg"
+                      alt="Ігровий момент гравців команд НБА з графічними елементами"
+                      class="portfolio__image"
+                    />
+                  </picture>
+
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -278,13 +364,68 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="/">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
-                    src="./images/portfolio3.jpeg"
-                    alt="Логотип ресторану з назвою на передньому плані та малюнком риби позаду"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio07-desktop.webp    1x,
+                        ./images/portfolio07-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio07-desktop.jpeg    1x,
+                        ./images/portfolio07-desktop@2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- tablet pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio07-tablet.webp    1x,
+                        ./images/portfolio07-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio07-tablet.jpeg    1x,
+                        ./images/portfolio07-tablet@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- mobile pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio07-mobile.webp    1x,
+                        ./images/portfolio07-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio07-mobile.jpeg    1x,
+                        ./images/portfolio07-mobile@2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/portfolio07-mobile.jpeg"
+                      alt="Логотип ресторану з назвою на передньому плані та малюнком риби позаду"
+                      class="portfolio__image"
+                    />
+                  </picture>
+
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -304,13 +445,68 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="/">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
-                    src="./images/portfolio4.jpeg"
-                    alt="Чорні бездротові навушники на білому фоні"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio06-desktop.webp    1x,
+                        ./images/portfolio06-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio06-desktop.jpeg    1x,
+                        ./images/portfolio06-desktop@2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- tablet pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio06-tablet.webp    1x,
+                        ./images/portfolio06-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio06-tablet.jpeg    1x,
+                        ./images/portfolio06-tablet@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- mobile pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio06-mobile.webp    1x,
+                        ./images/portfolio06-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio06-mobile.jpeg    1x,
+                        ./images/portfolio06-mobile@2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/portfolio06-mobile.jpeg"
+                      alt="Чорні бездротові навушники на білому фоні"
+                      class="portfolio__image"
+                    />
+                  </picture>
+
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -330,13 +526,68 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="/">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
-                    src="./images/portfolio5.jpeg"
-                    alt="Графічні коробки різного кольору з місцеп під опис"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio05-desktop.webp    1x,
+                        ./images/portfolio05-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio05-desktop.jpeg    1x,
+                        ./images/portfolio05-desktop@2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- tablet pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio05-tablet.webp    1x,
+                        ./images/portfolio05-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio05-tablet.jpeg    1x,
+                        ./images/portfolio05-tablet@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- mobile pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio05-mobile.webp    1x,
+                        ./images/portfolio05-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio05-mobile.jpeg    1x,
+                        ./images/portfolio05-mobile@2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/portfolio05-mobile.jpeg"
+                      alt="Графічні коробки різного кольору з місцеп під опис"
+                      class="portfolio__image"
+                    />
+                  </picture>
+
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -356,13 +607,68 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="/">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
-                    src="./images/portfolio6.jpeg"
-                    alt="Компьютер айМак з макетом веб-сайта на екрані"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio04-desktop.webp    1x,
+                        ./images/portfolio04-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio04-desktop.jpeg    1x,
+                        ./images/portfolio04-desktop@2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- tablet pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio04-tablet.webp    1x,
+                        ./images/portfolio04-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio04-tablet.jpeg    1x,
+                        ./images/portfolio04-tablet@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- mobile pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio04-mobile.webp    1x,
+                        ./images/portfolio04-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio04-mobile.jpeg    1x,
+                        ./images/portfolio04-mobile@2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/portfolio04-mobile.jpeg"
+                      alt="Компьютер айМак з макетом веб-сайта на екрані"
+                      class="portfolio__image"
+                    />
+                  </picture>
+
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -382,13 +688,68 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="/">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
-                    src="./images/portfolio7.jpeg"
-                    alt="Графічний макет розгорнутого журналу"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio03-desktop.webp    1x,
+                        ./images/portfolio03-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio03-desktop.jpeg    1x,
+                        ./images/portfolio03-desktop@2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- tablet pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio03-tablet.webp    1x,
+                        ./images/portfolio03-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio03-tablet.jpeg    1x,
+                        ./images/portfolio03-tablet@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- mobile pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio03-mobile.webp    1x,
+                        ./images/portfolio03-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio03-mobile.jpeg    1x,
+                        ./images/portfolio03-mobile@2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/portfolio03-mobile.jpeg"
+                      alt="Графічний макет розгорнутого журналу"
+                      class="portfolio__image"
+                    />
+                  </picture>
+
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -408,13 +769,68 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="/">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
-                    src="./images/portfolio8.jpeg"
-                    alt="Мокап бірки з місцем під опис"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio02-desktop.webp    1x,
+                        ./images/portfolio02-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio02-desktop.jpeg    1x,
+                        ./images/portfolio02-desktop@2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- tablet pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio02-tablet.webp    1x,
+                        ./images/portfolio02-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio02-tablet.jpeg    1x,
+                        ./images/portfolio02-tablet@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- mobile pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio02-mobile.webp    1x,
+                        ./images/portfolio02-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio02-mobile.jpeg    1x,
+                        ./images/portfolio02-mobile@2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/portfolio02-mobile.jpeg"
+                      alt="Мокап бірки з місцем під опис"
+                      class="portfolio__image"
+                    />
+                  </picture>
+
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -434,13 +850,68 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="/">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__image"
-                    src="./images/portfolio9.jpeg"
-                    alt="Людина користуется лептопом поруч з купою паперу. На екрані представлений макет веб-сайту"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio01-desktop.webp    1x,
+                        ./images/portfolio01-desktop@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio01-desktop.jpeg    1x,
+                        ./images/portfolio01-desktop@2x.jpeg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <!-- tablet pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio01-tablet.webp    1x,
+                        ./images/portfolio01-tablet@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio01-tablet.jpeg    1x,
+                        ./images/portfolio01-tablet@2x.jpeg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <!-- mobile pic -->
+                    <source
+                      srcset="
+                        ./images/portfolio01-mobile.webp    1x,
+                        ./images/portfolio01-mobile@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/portfolio01-mobile.jpeg    1x,
+                        ./images/portfolio01-mobile@2x.jpeg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <img
+                      src="./images/portfolio01-mobile.jpeg"
+                      alt="Людина користуется лептопом поруч з купою паперу. На екрані представлений макет веб-сайту"
+                      class="portfolio__image"
+                    />
+                  </picture>
+
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -464,7 +935,7 @@
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__left">
-          <div>
+          <div class="footer__main">
             <a class="logo logo--footer" href="index.html"
               ><span class="logo__accent">Web</span>Studio</a
             >
